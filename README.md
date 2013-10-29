@@ -2,6 +2,15 @@ BitBot
 ======
 BitBot is an automated betting bot for Just-Dice. It utilizes GreaseMonkey to run the betting the browser.
 
+##Disclaimer
+__warning__: remember, gambling odds are never in your favor. Consider it a form of entertainment that you are paying for. Never gamble with money you are not ready to lose. Using a bot just means you can also lose you money while you sleep.
+
+##Just-Dice
+[Just Dice](http://www.just-dice.com/) is a "Fast paced provably fair dice-based Bitcoin casino. Low 1% house edge."
+
+##How to use
+Simply install the JS file as a GreaseMonkey script and click the "play" button on the screen.
+
 ##Betting strategy
 The current betting strategy is this: after 5 consecutive losses, increase the bet to a new "bigtime" bet and double the bet until you win (up to a max of 10 bets). This strategy can be changed by modifying configs and the `applyStrategy` method.
 
@@ -44,3 +53,6 @@ __fx_dings__: object used to store sound effects (small wins)
 __fx_jackpots__: object used to store sound effects (big wins)
 
 __fx_aww__: object used to sound effects (big loss)
+
+##Donation
+Like the bot? Feel free to donate Bitcoin to `1C9dGf56JP7GYp2YcDTZ2PtMEmZAMXPm9D`. Thanks!
