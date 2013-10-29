@@ -40,7 +40,7 @@ $(function() {
 
       $("body").append('<audio src="http://kaliara.com/jackpot1.ogg" id="fx_jackpot1" preload="auto" controls></audio>');
       fx_jackpots.push(document.getElementById("fx_jackpot1"));
-      $("body").append('<audio src="http://kaliara.com/jackpot1.ogg" id="fx_jackpot2" preload="auto" controls></audio>');
+      $("body").append('<audio src="http://kaliara.com/jackpot2.ogg" id="fx_jackpot2" preload="auto" controls></audio>');
       fx_jackpots.push(document.getElementById("fx_jackpot2"));
 
       $("body").append('<audio src="http://kaliara.com/aww.ogg" id="fx_aww" preload="auto" controls></audio>');
@@ -105,7 +105,7 @@ $(function() {
     },
     
     setBet = function(bet) {
-      current_bet = bet;
+      current_bet = parseFloat(bet);
       $("#pct_bet").val(bet);
     },
     
@@ -226,12 +226,11 @@ $(function() {
     // set defaults
     var min_bet = 0.000001,
         bigtime_bet = 0.00005,
-        max_bet = null,
         multiplier = 2, 
-        minutes_to_play = 60,
+        minutes_to_play = 5,
         rally = {}, 
         rally_bigtime = 5,
-        rally_bets = 11, 
+        rally_bets = 10, 
         rally_max = rally_bigtime + rally_bets,
         big_win_usd = 5,
         profit = 0,
@@ -249,7 +248,7 @@ $(function() {
     // start the bot when clicking the start buttons
     $("#start_button").on("click", function(){
       setTimeout(function(){
-        bet_interval = setInterval(submitBet, 2000);
+        bet_interval = setInterval(submitBet, 3000);
       }, 1000);
     
       // convert currency to USD
